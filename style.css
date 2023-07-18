@@ -54,14 +54,16 @@ body {
 #submit {
     font-size: large;
     padding: 5px;
-    color: var(--button-dark);
-    transition: .2s ease-in-out 0s;
     margin-left: 5px;
     cursor: pointer;
+    color: var(--button-dark);
+    transition: .2s ease-in-out 0s;
 }
-
 #submit:hover {
     transform: scale(1.25);
+}
+.user-input{
+    padding-left: 0px !important;
 }
 
 li {
@@ -69,8 +71,8 @@ li {
     font-size: 20px;
     cursor: pointer;
     user-select: none;
-   
-    
+
+
     font-family: 'Roboto Slab', serif;
 
 }
@@ -93,15 +95,18 @@ ul li::before {
     top: 17px;
     left: 0px;
 }
-ul li.checked{
+
+ul li.checked {
     color: #555;
     text-decoration: line-through;
-    font-weight:50px;
+    font-weight: 50px;
 }
-ul li.checked::before{
+
+ul li.checked::before {
     background-image: url(images/checked.png);
 }
-span{
+
+span {
     position: absolute;
     right: 10px;
     width: 40px;
@@ -111,7 +116,49 @@ span{
     line-height: 40px;
     text-align: center;
 }
-span:hover{
-    background:var(--primary-background);
-    color: var( --container-background);
+
+span:hover {
+    background: var(--primary-background);
+    color: var(--container-background);
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 600px) {
+    .container {
+        background-color: var(--container-background);
+        position: static;
+        margin-top: 20%;
+        padding: 10px 20px 10px 20px;
+    }
+    .form-control {
+        display: inline-block;
+    }
+
+    #text {
+        height: 40px;
+        width: 270px;
+        padding-left: 10px;
+        border: none;
+        font-size: 19px;
+
+    }
+
+    #submit {
+        padding: 5px;
+        margin-left: 3px;
+    }
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
